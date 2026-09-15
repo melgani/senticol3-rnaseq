@@ -1,24 +1,50 @@
-SentiCOL3 — RNA-seq analysis
+SENTICOL III — RNA-seq analysis
 
-This repository contains the R scripts used for the RNA-seq analysis performed as part of the SentiCOL3 study.
+This repository contains the R scripts used for the RNA-seq analysis performed as part of the SENTICOL III GINECO trial.
 
-The analysis implements a reproducible workflow for transcriptomic data analysis, including differential expression analysis using the limma-voom framework.
+The analyses contribute to the study:
 
-Repository contents
+Molecular alterations and relapse risk in early-staged cervical cancer from the SENTICOL III GINECO trial
+
+The repository is intended to facilitate transparency and reproducibility of the computational analyses reported in the associated research work.
+
+Study
+
+SENTICOL III is a multicenter clinical trial investigating molecular and clinical factors associated with outcomes in patients with early-stage cervical cancer.
+
+The present analysis focuses on transcriptomic data and differential gene expression analysis.
+
+Analysis workflow
+
+The main analysis was performed in R using the limma-voom framework.
+
+The workflow includes the processing and statistical analysis of RNA-seq data and the identification of differentially expressed genes between the relevant experimental groups.
+
+Repository structure
 senticol3-rnaseq/
+│
 ├── README.md
-├── RNAseq_Senticol_limmavoom_clean.R
+├── CITATION.cff
 ├── LICENSE
-└── CITATION.cff
-Analysis
+│
+├── scripts/
+│   └── RNAseq_Sententicol_limmavoom_clean.R
+│
+├── data/
+│   └── README.md
+│
+└── results/
+    └── README.md
+
+Note: The repository does not contain identifiable patient-level data or raw sequencing files.
+
+Main script
 
 The main analysis script is:
 
-RNAseq_Senticol_limmavoom_clean.R
+scripts/RNAseq_Senticol_limmavoom_clean.R
 
-The script contains the statistical workflow used for RNA-seq differential expression analysis.
-
-The analysis is based on R and the Bioconductor ecosystem, including the limma package and the voom methodology.
+It implements the RNA-seq differential expression analysis using the limma and voom methodology.
 
 Requirements
 
@@ -27,46 +53,43 @@ The analysis requires:
 R
 Bioconductor
 limma
-the additional R/Bioconductor packages required by the analysis script
+edgeR
+and the additional R packages required by the analysis script
 
-The versions of R and the packages should be recorded to ensure reproducibility.
-
-Usage
-
-Clone the repository:
-
-git clone https://github.com/melgani/senticol3-rnaseq.git
-cd senticol3-rnaseq
-
-Open the main R script:
-
-RNAseq_Senticol_limmavoom_clean.R
-
-Before running the analysis, adapt the input file paths and experimental metadata to the local data structure, if required.
+The exact package versions should be recorded to facilitate reproducibility.
 
 Data availability
 
-The raw and/or processed sequencing data are not included in this repository.
+Raw sequencing data and/or patient-level clinical data are not distributed in this repository.
 
-When applicable, sequencing data are available through the corresponding public repository under the accession number reported in the associated publication.
+Where applicable, the sequencing data are deposited in an appropriate public repository under the accession number reported in the associated publication.
+
+Because the study involves human samples, access to clinical and molecular data may be subject to ethical, legal, and data-protection restrictions.
 
 Reproducibility
 
-This repository is intended to support the reproducibility of the analyses reported in the associated research article.
+This repository provides the computational code used for the RNA-seq analyses associated with the study.
 
-For reproducibility, users should record the versions of:
+For reproducibility, users should use the versioned release of this repository corresponding to the publication.
 
-R
-Bioconductor
-limma
-all other R packages used by the workflow
-
-A versioned release of this repository should preferably be used when citing the analysis.
+The software environment should include the R and Bioconductor versions and package versions used to perform the analysis.
 
 Citation
 
-If you use this code or reproduce analyses from this repository, please cite the associated research article and this repository.
+If you use the code or reproduce analyses from this repository, please cite the associated research article.
+
+Please also cite the specific version of this repository used for the analysis.
+
+Citation information is provided in CITATION.cff.
+
+Authors
+
+Maryame El Gani, Sabrina Ibadioune, Abderaouf Hamza, Zakhia El Beaino, Sophie Vacher, Anne Schnitzler, Emmanuelle Jeannot, Julien Masliah-Planchon, Vincent Cockenpot, Alexandre Degnieau, Gwenaël Ferron, François Golfier, Eric Lambaudie, Fabrice Narducci, Cécile Loaec, Jennifer Uzan, Frederic Marchal, Anne-Sophie Bats, Martin Koskas, Virginie Fourchotte, Estelle Wafo, Nicolas Bourdel, Raffaèle Fauvet, Marie Plante, Patrice Mathevet, Maud Kamal, Fabrice Lecuru, Ivan Bieche.
+
+License
+
+The source code is distributed under the license specified in LICENSE.
 
 Contact
 
-For questions regarding the analysis or the repository, please open a GitHub issue or contact the corresponding author of the associated publication.
+For questions regarding the computational analysis, please open an issue in this repository or contact the corresponding author of the associated publication.
