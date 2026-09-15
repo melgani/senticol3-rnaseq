@@ -1,0 +1,85 @@
+cff-version: 1.2.0
+
+message: "If you use this repository, please cite the associated research article and this repository."
+
+title: "SENTICOL III — RNA-seq analysis"
+
+type: software
+
+repository-code: "https://github.com/melgani/senticol3-rnaseq"
+
+abstract: >
+R scripts used for RNA-seq analysis in the SENTICOL III GINECO trial,
+associated with the study "Molecular alterations and relapse risk in
+early-staged cervical cancer from the SENTICOL III GINECO trial."
+
+keywords:
+
+* cervical cancer
+* RNA-seq
+* transcriptomics
+* differential expression
+* limma
+* voom
+* SENTICOL III
+* GINECO
+* reproducible research
+
+authors:
+
+* family-names: "El Gani"
+  given-names: "Maryame"
+* family-names: "Ibadioune"
+  given-names: "Sabrina"
+* family-names: "Hamza"
+  given-names: "Abderaouf"
+* family-names: "El Beaino"
+  given-names: "Zakhia"
+* family-names: "Vacher"
+  given-names: "Sophie"
+* family-names: "Schnitzler"
+  given-names: "Anne"
+* family-names: "Jeannot"
+  given-names: "Emmanuelle"
+* family-names: "Masliah-Planchon"
+  given-names: "Julien"
+* family-names: "Cockenpot"
+  given-names: "Vincent"
+* family-names: "Degnieau"
+  given-names: "Alexandre"
+* family-names: "Ferron"
+  given-names: "Gwenaël"
+* family-names: "Golfier"
+  given-names: "François"
+* family-names: "Lambaudie"
+  given-names: "Eric"
+* family-names: "Narducci"
+  given-names: "Fabrice"
+* family-names: "Loaec"
+  given-names: "Cécile"
+* family-names: "Uzan"
+  given-names: "Jennifer"
+* family-names: "Marchal"
+  given-names: "Frederic"
+* family-names: "Bats"
+  given-names: "Anne-Sophie"
+* family-names: "Koskas"
+  given-names: "Martin"
+* family-names: "Fourchotte"
+  given-names: "Virginie"
+* family-names: "Wafo"
+  given-names: "Estelle"
+* family-names: "Bourdel"
+  given-names: "Nicolas"
+* family-names: "Fauvet"
+  given-names: "Raffaèle"
+* family-names: "Plante"
+  given-names: "Marie"
+* family-names: "Mathevet"
+  given-names: "Patrice"
+* family-names: "Kamal"
+  given-names: "Maud"
+* family-names: "Lecuru"
+  given-names: "Fabrice"
+* family-names: "Bieche"
+  given-names: "Ivan"
