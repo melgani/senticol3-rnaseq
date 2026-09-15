@@ -1,95 +1,120 @@
-SENTICOL III — RNA-seq analysis
+# SENTICOL III — RNA-seq analysis
 
-This repository contains the R scripts used for the RNA-seq analysis performed as part of the SENTICOL III GINECO trial.
+This repository contains the R scripts used for the RNA-seq analysis performed as part of the **SENTICOL III GINECO trial**.
 
-The analyses contribute to the study:
+The analysis is associated with the study:
 
-Molecular alterations and relapse risk in early-staged cervical cancer from the SENTICOL III GINECO trial
+> **Molecular alterations and relapse risk in early-staged cervical cancer from the SENTICOL III GINECO trial**
 
-The repository is intended to facilitate transparency and reproducibility of the computational analyses reported in the associated research work.
+The purpose of this repository is to provide the computational code used for the transcriptomic analyses and to facilitate transparency and reproducibility of the research.
 
-Study
+## Study
 
-SENTICOL III is a multicenter clinical trial investigating molecular and clinical factors associated with outcomes in patients with early-stage cervical cancer.
+SENTICOL III is a multicenter GINECO clinical trial investigating molecular and clinical factors associated with relapse risk and outcomes in patients with early-stage cervical cancer.
 
-The present analysis focuses on transcriptomic data and differential gene expression analysis.
+This repository specifically contains the computational workflow used for the RNA-seq analysis.
 
-Analysis workflow
+## RNA-seq analysis
 
-The main analysis was performed in R using the limma-voom framework.
+RNA-seq data were analyzed using R and the Bioconductor ecosystem.
 
-The workflow includes the processing and statistical analysis of RNA-seq data and the identification of differentially expressed genes between the relevant experimental groups.
-
-Repository structure
-senticol3-rnaseq/
-│
-├── README.md
-├── CITATION.cff
-├── LICENSE
-│
-├── scripts/
-│   └── RNAseq_Sententicol_limmavoom_clean.R
-│
-├── data/
-│   └── README.md
-│
-└── results/
-    └── README.md
-
-Note: The repository does not contain identifiable patient-level data or raw sequencing files.
-
-Main script
+Differential gene expression analysis was performed using the **limma-voom** framework.
 
 The main analysis script is:
 
-scripts/RNAseq_Senticol_limmavoom_clean.R
+```text
+RNAseq_Senticol_limmavoom_clean.R
+```
 
-It implements the RNA-seq differential expression analysis using the limma and voom methodology.
+## Repository contents
 
-Requirements
+```text
+senticol3-rnaseq/
+│
+├── README.md
+└── RNAseq_Senticol_limmavoom_clean.R
+```
+
+Additional files and documentation may be added as the repository is updated.
+
+## Requirements
 
 The analysis requires:
 
-R
-Bioconductor
-limma
-edgeR
-and the additional R packages required by the analysis script
+* R
+* Bioconductor
+* limma
+* voom
+* Other R/Bioconductor packages required by the analysis script
 
-The exact package versions should be recorded to facilitate reproducibility.
+The analysis should preferably be performed using the same or compatible versions of R and the required packages to ensure reproducibility.
 
-Data availability
+## Usage
 
-Raw sequencing data and/or patient-level clinical data are not distributed in this repository.
+Clone the repository:
 
-Where applicable, the sequencing data are deposited in an appropriate public repository under the accession number reported in the associated publication.
+```bash
+git clone https://github.com/melgani/senticol3-rnaseq.git
+```
 
-Because the study involves human samples, access to clinical and molecular data may be subject to ethical, legal, and data-protection restrictions.
+Then move to the repository directory:
 
-Reproducibility
+```bash
+cd senticol3-rnaseq
+```
 
-This repository provides the computational code used for the RNA-seq analyses associated with the study.
+The main analysis script can be opened and executed in R or RStudio:
 
-For reproducibility, users should use the versioned release of this repository corresponding to the publication.
+```text
+RNAseq_Senticol_limmavoom_clean.R
+```
 
-The software environment should include the R and Bioconductor versions and package versions used to perform the analysis.
+Before running the script, the input data paths and other parameters may need to be adapted to the local environment.
 
-Citation
+## Data availability
 
-If you use the code or reproduce analyses from this repository, please cite the associated research article.
+Patient-level clinical data and raw sequencing data are **not included in this repository**.
 
-Please also cite the specific version of this repository used for the analysis.
+The data are subject to the applicable ethical, legal, and data-protection requirements governing the SENTICOL III GINECO trial.
 
-Citation information is provided in CITATION.cff.
+Where applicable, information regarding access to the underlying molecular or clinical datasets will be provided in the associated publication.
 
-Authors
+## Reproducibility
 
-Maryame El Gani, Sabrina Ibadioune, Abderaouf Hamza, Zakhia El Beaino, Sophie Vacher, Anne Schnitzler, Emmanuelle Jeannot, Julien Masliah-Planchon, Vincent Cockenpot, Alexandre Degnieau, Gwenaël Ferron, François Golfier, Eric Lambaudie, Fabrice Narducci, Cécile Loaec, Jennifer Uzan, Frederic Marchal, Anne-Sophie Bats, Martin Koskas, Virginie Fourchotte, Estelle Wafo, Nicolas Bourdel, Raffaèle Fauvet, Marie Plante, Patrice Mathevet, Maud Kamal, Fabrice Lecuru, Ivan Bieche.
+This repository provides the R code used for the RNA-seq analyses associated with the study.
 
-License
+For reproducibility, users should record the versions of:
 
-The source code is distributed under the license specified in LICENSE.
+* R
+* Bioconductor
+* limma
+* voom
+* Other R/Bioconductor packages used in the analysis
 
-Contact
+The repository may be updated over time. When available, users are encouraged to use the specific version or release of the repository corresponding to the published analysis.
 
-For questions regarding the computational analysis, please open an issue in this repository or contact the corresponding author of the associated publication.
+## Citation
+
+If you use this code or reproduce analyses from this repository, please cite the associated research article:
+
+> **El Gani M, Ibadioune S, Hamza A, et al. Molecular alterations and relapse risk in early-staged cervical cancer from the SENTICOL III GINECO trial.**
+
+Please also cite the specific version of this repository used for your analysis.
+
+A `CITATION.cff` file will be provided to facilitate citation of the repository.
+
+## Authors
+
+**Maryame El Gani**, **Sabrina Ibadioune**, **Abderaouf Hamza**, **Zakhia El Beaino**, **Sophie Vacher**, **Anne Schnitzler**, **Emmanuelle Jeannot**, **Julien Masliah-Planchon**, **Vincent Cockenpot**, **Alexandre Degnieau**, **Gwenaël Ferron**, **François Golfier**, **Eric Lambaudie**, **Fabrice Narducci**, **Cécile Loaec**, **Jennifer Uzan**, **Frederic Marchal**, **Anne-Sophie Bats**, **Martin Koskas**, **Virginie Fourchotte**, **Estelle Wafo**, **Nicolas Bourdel**, **Raffaèle Fauvet**, **Marie Plante**, **Patrice Mathevet**, **Maud Kamal**, **Fabrice Lecuru**, **Ivan Bieche**.
+
+## License
+
+The source code is made available under the license specified in the `LICENSE` file.
+
+## Contact
+
+For questions regarding the computational analysis or this repository, please open an issue on GitHub or contact the authors of the associated publication.
+
+## Repository
+
+https://github.com/melgani/senticol3-rnaseq
